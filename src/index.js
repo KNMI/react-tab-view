@@ -1,5 +1,5 @@
-import Tabs from './Tabs'
-import Tab from './Tab'
+import Tabs from './tabs'
+import Tab from './tab'
 
 export {
 	Tabs,

@@ -6,7 +6,9 @@ class TestComponent extends Component {
 
   render () {
 
-    const headers = ['heading 1', 'heading 2', 'heading 3'];
+    const headers = [{'text': 'heading 1', 'isDisabled': false},
+      {'text': 'heading 2', 'isDisabled': false},
+      {'text': 'heading 3', 'isDisabled': true}];
 
     return (
       <div>

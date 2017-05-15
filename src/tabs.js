@@ -67,8 +67,9 @@ class Tabs extends Component {
   render () {
     let headers = this.props.headers.map((h, i) => {
       return (
-        <li key={i} ref={'list' + i}>
-          <a data-tab-id={i} onClick={this.changeTab}>{h}</a>
+        // If list item must be disabled, make it unclickable and a bit grayed out.
+        <li key={i} ref={'list' + i} style={h.isDisabled ? {'opacity': 0.6, 'pointerEvents': 'none'} : {}}>
+          <a data-tab-id={i} onClick={this.changeTab}>{h.text}</a>
         </li>
       )
     })

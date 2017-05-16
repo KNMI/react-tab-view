@@ -10,6 +10,11 @@
   display: none;  
 }
 
+.react-disabled-tab {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
 .react-tabs .react-tab {
   background: rgb(250, 250, 250);
   margin: 1em auto;

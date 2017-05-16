@@ -20,7 +20,7 @@ class TestComponent extends Component {
 
   render () {
 
-    const headers = ['heading 1', 'heading 2'];
+    const headers = [{'text' : 'heading 1', 'isDisabled': true}, {'text': 'heading 2', 'isDisabled': false}];
 
     return (
       <div>
@@ -53,6 +53,10 @@ ReactDOM.render(
 ## Styles
 
 react-tab-view can be used with your own custom styles. A minimal [tabs.css](https://github.com/StevenIseki/react-tab-view/blob/master/example/public/tabs.css) style sheet is included as a guide.
+
+#### Disabled style
+By default, disabled tabs do not have styling.
+Add styling by adding the class 'react-disabled-tab' to your CSS.
 
 ## Development
     

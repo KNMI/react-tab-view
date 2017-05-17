@@ -271,7 +271,9 @@
 	    value: function setActiveTabHeader(list, id) {
 	      // set all headings as deselected
 	      for (var i = 0; i < list.length; i++) {
-	        list[i].className = '';
+	        if (list[i].className !== 'react-disabled-tab') {
+	          list[i].className = '';
+	        }
 	      }
 	      // set selected heading as selected
 	      list[id].className = 'selected';

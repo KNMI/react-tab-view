@@ -58,7 +58,7 @@ class Tabs extends Component {
   setActiveTabHeader (list, id) {
     // set all headings as deselected
     for (let i = 0; i < list.length; i++) {
-      if (list[i].className !== 'react-disabled-tab') {
+      if (!this.props.headers[i].isDisabled) {
         list[i].className = ''
       }
     }

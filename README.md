@@ -26,7 +26,8 @@ class TestComponent extends Component {
       <div>
         <Tabs headers={headers}>
           <Tab>
-            <p>This is the first tab's content</p>
+            <div><p>This is the first tab</p></div>
+            <div><p>with some content</p></div>
           </Tab>
           <Tab>
             <p>This is the second tab's content</p>
@@ -38,7 +39,7 @@ class TestComponent extends Component {
 }
 
 ReactDOM.render(
-  <TestComponent />, 
+  <TestComponent />,
   document.getElementById('root')
 )
 
@@ -50,6 +51,8 @@ ReactDOM.render(
 
 #### `1.0.3` uses React `^0.14.0`
 
+#### `1.0.4` uses React `^0.15.1`
+
 ## Styles
 
 react-tab-view can be used with your own custom styles. A minimal [tabs.css](https://github.com/StevenIseki/react-tab-view/blob/master/example/public/tabs.css) style sheet is included as a guide.
@@ -59,7 +62,7 @@ By default, disabled tabs do not have styling.
 Add styling by adding the class 'react-disabled-tab' to your CSS.
 
 ## Development
-    
+
     npm install
     npm test
     npm start

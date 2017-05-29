@@ -70,13 +70,22 @@
 	var TestComponent = function (_Component) {
 	  _inherits(TestComponent, _Component);
 
-	  function TestComponent() {
+	  function TestComponent(props) {
 	    _classCallCheck(this, TestComponent);
 
-	    return _possibleConstructorReturn(this, (TestComponent.__proto__ || Object.getPrototypeOf(TestComponent)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (TestComponent.__proto__ || Object.getPrototypeOf(TestComponent)).call(this, props));
+
+	    _this.state = { value: 'reactjs' };
+	    return _this;
 	  }
 
 	  _createClass(TestComponent, [{
+	    key: 'handleChange',
+	    value: function handleChange(e) {
+	      this.setState({ value: e });
+	      console.log(e);
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 
@@ -92,9 +101,27 @@
 	            _index.Tab,
 	            null,
 	            _react2.default.createElement(
-	              'p',
+	              'div',
 	              null,
-	              'This is the first tab'
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'This is the first tab'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'with some content'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              null,
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'and some more content'
+	              )
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -4688,7 +4715,7 @@
 	    key: 'propTypes',
 	    get: function get() {
 	      return {
-	        children: _react.PropTypes.object.isRequired
+	        children: _react2.default.PropTypes.node.isRequired
 	      };
 	    }
 	  }]);
